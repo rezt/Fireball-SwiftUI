@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var calcModel = CalcModel()
+    @State var calcModel = CalcModel()
     
     var body: some View {
         ZStack {
@@ -40,7 +40,7 @@ struct ContentView: View {
                 }
                 Spacer()
                 Button(action: {
-                    
+                    calcModel.roll()
                 }, label: {
                     RoundedRectangle(cornerRadius: 25)
                         .frame(width: 200, height: 100, alignment: .center)
