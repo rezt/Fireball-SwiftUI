@@ -31,4 +31,8 @@ struct CalcModel {
     func getRoll(forDice n: Int) -> Int {
         return rolls[n-1]
     }
+    
+    func getResult() -> String {
+        return String(result)
+    }
 }

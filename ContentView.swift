@@ -22,9 +22,10 @@ struct ContentView: View {
                     .font(Font.custom("CormorantGaramond-MediumItalic", size: 70))
                     .italic()
                 Spacer()
-                Text("48")
+                Text(calcModel.getResult())
                     .font(Font.custom("CormorantGaramond-MediumItalic", size: 70))
                     .foregroundColor(.red)
+                Spacer()
                 HStack {
                     DiceView(calcModel.getRoll(forDice: 1))
                     DiceView(calcModel.getRoll(forDice: 2))
