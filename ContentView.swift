@@ -9,8 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var rolls: [Int] = [1,2,3,4,5,6,1,2]
-    
+    var calcModel = CalcModel()
     
     var body: some View {
         ZStack {
@@ -27,16 +26,16 @@ struct ContentView: View {
                     .font(Font.custom("CormorantGaramond-MediumItalic", size: 70))
                     .foregroundColor(.red)
                 HStack {
-                    DiceView(rolls[0])
-                    DiceView(rolls[1])
-                    DiceView(rolls[2])
-                    DiceView(rolls[3])
+                    DiceView(calcModel.getRoll(forDice: 1))
+                    DiceView(calcModel.getRoll(forDice: 2))
+                    DiceView(calcModel.getRoll(forDice: 3))
+                    DiceView(calcModel.getRoll(forDice: 4))
                 }
                 HStack {
-                    DiceView(rolls[4])
-                    DiceView(rolls[5])
-                    DiceView(rolls[6])
-                    DiceView(rolls[7])
+                    DiceView(calcModel.getRoll(forDice: 5))
+                    DiceView(calcModel.getRoll(forDice: 6))
+                    DiceView(calcModel.getRoll(forDice: 7))
+                    DiceView(calcModel.getRoll(forDice: 8))
                 }
                 Spacer()
                 Button(action: {
